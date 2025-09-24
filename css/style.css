@@ -1,2 +1,14 @@
+:root{--ink:#0f172a;--line:#e2e8f0;--bg:#fff;--muted:#64748b}
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:system-ui,Arial,sans-serif}
+html,body{margin:0;padding:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+.container{width:min(1100px,92%);margin-inline:auto}
+.section{padding:56px 0}
+.site-header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:10}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#ffeb3b;text-decoration:none;color:#111;font-weight:700}
+.nav{display:flex;gap:18px}
+.nav a{color:var(--ink);text-decoration:none;font-weight:500}
+.nav a:hover{text-decoration:underline}
+.nav-toggle{display:none;border:1px solid var(--line);background:var(--bg);padding:6px 10px;border-radius:8px}
+.site-footer{border-top:1px solid var(--line);padding:18px 0;text-align:center;color:var(--muted)}
