@@ -1,68 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>My Website</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand">
-          <a href="#home" class="logo" aria-label="Home">⚡</a>
-          <span class="brand-name">My Website</span>
-        </div>
-        <nav class="nav">
-          <a href="#home">Home</a>
-          <a href="#our-profile">Our Profile</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Message Us</a>
-        </nav>
-        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#home" class="logo" aria-label="Home">⚡</a>
+        <span class="brand-name">My Website</span>
       </div>
-    </header>
 
-    <main>
-      <section id="home" class="section hero">
-        <div class="container">
-          <h1 id="welcome-title">Hi there, Welcome To Website</h1>
-          <p class="subtitle">Ini adalah website karya pertama</p>
-          <div
-            class="hero-banner"
-            role="img"
-            aria-label="Photo banner placeholder"
-          >
-            1366×579
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#our-profile">Our Profile</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Message Us</a>
+      </nav>
+
+      <!-- Tombol ganti nama (opsi cepat) -->
+      <button id="changeName" class="btn small" type="button">Ganti Nama</button>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero / Welcome -->
+  <section id="home" class="section hero">
+    <div class="container">
+      <h1 id="welcome-title">Hi there, Welcome To Website</h1>
+      <p class="subtitle">Ini adalah website karya pertama</p>
+
+      <div class="hero-banner" role="img" aria-label="Photo banner placeholder">
+        1366×579
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Headquarter -->
+  <section class="section hq">
+    <div class="container">
+      <h2>Our Headquarter</h2>
+
+      <div class="hq-grid">
+        <div class="hq-item">
+          <div class="circle"></div>
+          <p>Jakarta</p>
+        </div>
+        <div class="hq-item">
+          <div class="circle"></div>
+          <p>Bandung</p>
+        </div>
+        <div class="hq-item">
+          <div class="circle"></div>
+          <p>Surabaya</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Profile -->
+  <section id="our-profile" class="section profile">
+    <div class="container profile-grid">
+      <div class="profile-banner" role="img" aria-label="Company photo banner">Photo Banner</div>
+
+      <div class="profile-text">
+        <h2>About the Company</h2>
+        <p>
+          We are a creative tech company focusing on simple, fast, and reliable web solutions.
+          Our team values craftsmanship, clarity, and long-term impact for clients.
+        </p>
+
+        <div class="vm">
+          <div>
+            <h3>Vision</h3>
+            <ul>
+              <li>Empower businesses through delightful web experiences.</li>
+              <li>Become a trusted technology partner in the region.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Mission</h3>
+            <ul>
+              <li>Deliver accessible, high-performance products.</li>
+              <li>Invest in people, process, and open standards.</li>
+              <li>Build with empathy and measurable outcomes.</li>
+            </ul>
           </div>
         </div>
-      </section>
-      <section class="section hq">
-        <div class="container">
-          <h2>Our Headquarter</h2>
-          <div class="hq-grid">
-            <div class="hq-item">
-              <div class="circle"></div>
-              <p>Jakarta</p>
-            </div>
-            <div class="hq-item">
-              <div class="circle"></div>
-              <p>Bandung</p>
-            </div>
-            <div class="hq-item">
-              <div class="circle"></div>
-              <p>Surabaya</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="portfolio" class="section"></section>
-      <section id="contact" class="section"></section>
-    </main>
+      </div>
+    </div>
+  </section>
 
-    <footer class="site-footer">
-      <div class="container">Created by RevoU</div>
-    </footer>
-    <script src="js/script.js"></script>
-  </body>
+  <!-- Message Us -->
+  <section id="contact" class="section contact">
+    <div class="container contact-grid">
+      <div class="form-card">
+        <h2>Message Us</h2>
+
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Nama</label>
+            <input id="name" name="name" type="text" placeholder="Nama" />
+            <small class="error" id="err-name"></small>
+          </div>
+
+          <div class="field">
+            <label for="dob">Tanggal Lahir</label>
+            <input id="dob" name="dob" type="date" />
+            <small class="error" id="err-dob"></small>
+          </div>
+
+          <div class="field">
+            <label>Jenis Kelamin</label>
+            <div class="radio-group">
+              <label><input type="radio" name="gender" value="Laki-Laki" /> Laki-Laki</label>
+              <label><input type="radio" name="gender" value="Perempuan" /> Perempuan</label>
+            </div>
+            <small class="error" id="err-gender"></small>
+          </div>
+
+          <div class="field">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="4" placeholder="Pesan"></textarea>
+            <small class="error" id="err-message"></small>
+          </div>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+
+      <aside class="result-card" aria-live="polite">
+        <div class="result-inner">
+          <p><strong>Current time:</strong> <span id="now">—</span></p>
+          <p><strong>Nama:</strong> <span id="r-name">—</span></p>
+          <p><strong>Tanggal Lahir:</strong> <span id="r-dob">—</span></p>
+          <p><strong>Jenis Kelamin:</strong> <span id="r-gender">—</span></p>
+          <p><strong>Pesan:</strong> <span id="r-message">—</span></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">Created by RevoU</div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
